@@ -1,0 +1,44 @@
+sync:
+  toHost:
+    pods:
+      enabled: true
+  fromHost:
+    storageClasses:
+      enabled: true  
+    nodes:
+      enabled: false
+      selector:
+        labels:
+          team: tpe
+    events:
+      enabled: true
+networking:
+  advanced:
+    fallbackHostCluster: true
+integrations:
+  metricsServer:
+    enabled: true
+    nodes: true
+    pods: true
+controlPlane:
+  backingStore:
+    etcd:
+      deploy:
+        enabled: true
+        statefulSet:
+          highAvailability:
+            replicas: 1
+  coredns:
+    deployment:
+      replicas: 1
+  distro:
+    k8s:
+      enabled: true
+      version: v1.32.1
+      apiServer:
+        enabled: true
+  statefulSet:
+    highAvailability:
+      replicas: 1
+    scheduling:
+      podManagementPolicy: OrderedReady
