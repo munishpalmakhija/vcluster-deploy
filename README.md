@@ -1,6 +1,3 @@
-# vcluster-deploy
- Configs to deploy vCluster on VKS
-
 # vCluster Deploy
 
 This repo contains script and the config files to provision virutal K8s clusters a.k.a. vClusters.

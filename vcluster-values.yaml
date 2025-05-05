@@ -7,9 +7,6 @@ sync:
       enabled: true  
     nodes:
       enabled: false
-      selector:
-        labels:
-          team: tpe
     events:
       enabled: true
 networking:
